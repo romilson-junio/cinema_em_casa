@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const mongodbUrl = 'mongodb://localhost/cinema?authSource=admin'
+const messages = require('../utils/bundle')
 
 mongoose.connect(mongodbUrl, {
     useUnifiedTopology: true,
@@ -11,4 +12,4 @@ mongoose.connect(mongodbUrl, {
 const db = mongoose.connection
 
 db.on('error', (err) => console.error(`Error: ${err}`))
-db.on('connected', (err, res) => console.log('Connected to database'))
+db.on('connected', (err, res) => console.log(messages.connectedDatabase))
