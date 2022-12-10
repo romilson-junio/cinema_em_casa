@@ -4,6 +4,7 @@ const app = express()
 const port = 3000
 const HttpStatus = require('http-status-codes')
 
+const db = require('./src/utils/db')
 const movieRouter = require('./src/routes/movie.route')
 const cineRouter = require('./src/routes/cine.route')
 const userRouter = require('./src/routes/users.route')
