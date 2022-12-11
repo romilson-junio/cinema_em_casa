@@ -4,7 +4,7 @@ services:
     image: 'mongo:latest'
     container_name: 'mongodb2'
     volumes:
-      - ~/mongo_data3:/data/db
+      - ~/mongo_data3:/data/database
     environment:
       - MONGO_INITDB_DATABASE=cinema
       - MONGO_INITDB_ROOT_USERNAME=cinema
